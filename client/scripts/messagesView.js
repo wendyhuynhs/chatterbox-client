@@ -9,6 +9,13 @@ var MessagesView = {
   },
 
   renderMessage: function(data) {
+    if (data.username === undefined) {
+      data.username = '';
+    }
+    if (data.text === undefined) {
+      data.text = ''
+    }
+    // console.log(data.username)
     return MessageView.render(data)
   }
 
