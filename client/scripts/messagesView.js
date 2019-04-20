@@ -6,6 +6,7 @@ var MessagesView = {
     for (var i = 0; i < Messages.result.length; i++) {
       MessagesView.$chats.append(MessagesView.renderMessage(Messages.result[i]))
     }
+        
   },
 
   renderMessage: function(data) {
@@ -15,9 +16,14 @@ var MessagesView = {
     if (data.text === undefined) {
       data.text = ''
     }
-    // console.log(data.username)
+
+    // setInterval(function () {
+    //   window.location.href = window.location.href;
+    // }, 50000);
+
     return MessageView.render(data)
   }
+  
 
 };
 

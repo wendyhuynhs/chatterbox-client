@@ -13,14 +13,17 @@ var FormView = {
     var message = {
       username: App.username,
       text: input,
-      // roomname: ''
+      roomname: RoomsView.roomname
     }
 
     Parse.create(message, function () {
-      // Messages.result.push(message);
+      Messages.result.push(message);
       MessagesView.$chats.prepend(MessageView.render(message));
     })
 
+    setInterval(function () {
+      window.location.href = window.location.href;
+    }, 500);
 
   },
 

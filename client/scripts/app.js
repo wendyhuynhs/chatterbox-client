@@ -23,6 +23,7 @@ var App = {
         Messages.result.push(data.results[i]);
       }
       MessagesView.initialize();
+      RoomsView.initialize();
       callback();
     });
   },

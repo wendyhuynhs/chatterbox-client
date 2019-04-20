@@ -5,6 +5,7 @@ var Messages = {
 
 
 
+
 // (function lol () {
-//     console.log(Messages.result)
+    // console.log(Messages.result)
 // })()
