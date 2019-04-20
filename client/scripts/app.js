@@ -17,13 +17,12 @@ var App = {
 
   },
 
-  fetch: function(callback = ()=>{}) {
+  fetch: function (callback = () => { }) {
     Parse.readAll((data) => {
       for (var i = 0; i < data.results.length; i++) {
         Messages.result.push(data.results[i]);
-        // MessagesView.renderMessage(data.results[i])
       }
-MessagesView.initialize();
+      MessagesView.initialize();
       callback();
     });
   },

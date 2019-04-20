@@ -8,16 +8,17 @@ var FormView = {
 
   handleSubmit: function (event) {
     event.preventDefault();
+    var input = $('input:text').val()
 
     var message = {
       username: App.username,
-      text: $('input:text').val(),
-      roomname: ''
+      text: input,
+      // roomname: ''
     }
-    
-    Parse.create((message) => {
-      MessagesView.$chats.prepend(MessageView.render(message));
 
+    Parse.create(message, function () {
+      // Messages.result.push(message);
+      MessagesView.$chats.prepend(MessageView.render(message));
     })
 
 
